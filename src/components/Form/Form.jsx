@@ -28,8 +28,6 @@ export function Form() {
     form.reset();
   };
 
-  console.log(contacts);
-
   return (
     <ContactsForm onSubmit={handleFormSubmit}>
       <FormLabel>
