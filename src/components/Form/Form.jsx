@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { ContactsForm, FormLabel, FormText, SubmitButton } from './styled';
-import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { getContacts } from 'redux/contacts/selectors';
 import { useSelector } from 'react-redux';
 
 export function Form() {

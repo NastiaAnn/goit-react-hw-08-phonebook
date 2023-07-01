@@ -1,7 +1,7 @@
 import React from 'react';
 import { Label, Text } from './styled';
 import { useDispatch } from 'react-redux';
-import { handleFilter } from 'redux/filterSlice';
+import { handleFilter } from 'redux/filter/filterSlice';
 
 export const Filter = () => {
   const dispatch = useDispatch();
