@@ -17,6 +17,9 @@ export const Input = styled.input`
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  &:hover {
+    border-color: #e63900;
+  }
 `;
 
 export const Button = styled.button`

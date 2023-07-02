@@ -9,28 +9,37 @@ export const ContactsForm = styled.form`
 export const FormLabel = styled.label`
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  font-size: 25px;
+  gap: 5px;
+  font-size: 16px;
   font-weight: 500;
 `;
 
 export const FormText = styled.input`
-  display: inline-block;
-  padding: 10px 10px;
-  font-size: 20px;
-  font-weight: 800;
-  background-color: transparent;
-  border: 1px solid black;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    border-color: #e63900;
+  }
 `;
 
 export const SubmitButton = styled.button`
   display: inline-block;
-  width: 100%;
-  padding: 10px 10px;
-  font-size: 20px;
-  font-weight: 800;
-  background-color: transparent;
-  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #e63900;
+  }
 `;

@@ -6,6 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
+import { Oval } from 'react-loader-spinner';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -21,7 +22,27 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Loading...</b>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '70vh',
+      }}
+    >
+      <Oval
+        height={80}
+        width={80}
+        color="#ff4500"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        ariaLabel="oval-loading"
+        secondaryColor="#808080"
+        strokeWidth={2}
+        strokeWidthSecondary={2}
+      />
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

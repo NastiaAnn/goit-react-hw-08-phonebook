@@ -5,6 +5,7 @@ import { ContactList } from 'components/ContactList';
 import { Filter } from 'components/Filter';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getError, getIsLoading } from 'redux/contacts/selectors';
+import { Oval } from 'react-loader-spinner';
 
 export default function Tasks() {
   const dispatch = useDispatch();
@@ -18,7 +19,6 @@ export default function Tasks() {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -29,10 +29,10 @@ export default function Tasks() {
     >
       <h1
         style={{
-          fontSize: '35px',
-          fontWeight: 800,
+          fontSize: '25px',
+          fontWeight: 600,
           marginTop: '0px',
-          marginBottom: '30px',
+          marginBottom: '15px',
         }}
       >
         Phonebook
@@ -40,15 +40,29 @@ export default function Tasks() {
       <Form />
       <h2
         style={{
-          fontSize: '35px',
-          fontWeight: 800,
+          fontSize: '25px',
+          fontWeight: 600,
           marginTop: '30px',
+          marginBottom: '10px',
         }}
       >
         Contacts
       </h2>
       <Filter />
-      {isLoading && !error && <b>Loading...</b>}
+      {isLoading && !error && (
+        <Oval
+          height={40}
+          width={40}
+          color="#ff4500"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="oval-loading"
+          secondaryColor="#808080"
+          strokeWidth={2}
+          strokeWidthSecondary={2}
+        />
+      )}
       <ContactList />
     </div>
   );

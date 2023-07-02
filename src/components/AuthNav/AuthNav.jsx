@@ -8,11 +8,11 @@ export const AuthNav = () => {
     margin-right: 10px;
 
     &.active {
-      color: orange;
+      color: #ff4500;
     }
 
     &:hover {
-      color: #ff6347;
+      color: #e63900;
     }
   `;
 

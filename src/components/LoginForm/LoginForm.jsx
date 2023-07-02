@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { Form, Label, Input, Button } from './styled';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -8,6 +9,15 @@ export const LoginForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+    if (form.elements.email.value.trim() === '') {
+      Notify.warning('Email field cannot be empty. Please, fill in');
+      return;
+    }
+
+    if (form.elements.password.value.trim() === '') {
+      Notify.warning('Password field cannot be empty. Please, fill in');
+      return;
+    }
     dispatch(
       logIn({
         email: form.elements.email.value,
@@ -15,6 +25,8 @@ export const LoginForm = () => {
       })
     );
     form.reset();
+
+    Notify.success('Successful login. Welcome to your personal account!');
   };
 
   return (

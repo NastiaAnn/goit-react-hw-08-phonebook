@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const ContactsList = styled.ul`
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 30px;
-  padding: 0px 0px;
+  padding: 0;
   list-style: none;
 `;
