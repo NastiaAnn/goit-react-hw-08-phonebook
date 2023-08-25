@@ -33,7 +33,6 @@ export default function Tasks() {
           fontWeight: 600,
           marginTop: '0px',
           marginBottom: '15px',
-          color: 'red',
         }}
       >
         Phonebook
